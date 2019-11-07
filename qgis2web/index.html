@@ -80,13 +80,16 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['MMSI'] !== null ? Autolinker.link(String(feature.properties['MMSI'])) : '') + '</td>\
+                        <th scope="row">MMSI</th>\
+                        <td>' + (feature.properties['MMSI'] !== null ? Autolinker.link(String(feature.properties['MMSI'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['begin'] !== null ? Autolinker.link(String(feature.properties['begin'])) : '') + '</td>\
+                        <th scope="row">begin</th>\
+                        <td>' + (feature.properties['begin'] !== null ? Autolinker.link(String(feature.properties['begin'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['end'] !== null ? Autolinker.link(String(feature.properties['end'])) : '') + '</td>\
+                        <th scope="row">end</th>\
+                        <td>' + (feature.properties['end'] !== null ? Autolinker.link(String(feature.properties['end'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -130,13 +133,16 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['MMSI'] !== null ? Autolinker.link(String(feature.properties['MMSI'])) : '') + '</td>\
+                        <th scope="row">MMSI</th>\
+                        <td>' + (feature.properties['MMSI'] !== null ? Autolinker.link(String(feature.properties['MMSI'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['begin'] !== null ? Autolinker.link(String(feature.properties['begin'])) : '') + '</td>\
+                        <th scope="row">begin</th>\
+                        <td>' + (feature.properties['begin'] !== null ? Autolinker.link(String(feature.properties['begin'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['end'] !== null ? Autolinker.link(String(feature.properties['end'])) : '') + '</td>\
+                        <th scope="row">end</th>\
+                        <td>' + (feature.properties['end'] !== null ? Autolinker.link(String(feature.properties['end'])) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
