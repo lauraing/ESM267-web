@@ -1,0 +1,44 @@
+---
+title: "AIS Passenger Ship"
+author: "Laura Ingulsrud"
+date: "11/6/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r packages}
+
+# Load packages
+library(tidyverse)
+
+```
+
+```{r data}
+
+# Read in AIS data for 2017, 2018, and 2019
+AIS2017 <- read.csv("NEW_AIS_2017.csv")
+AIS2018 <- read.csv("NEW_AIS_2018.csv")
+AIS2019 <- read.csv("NEW_AIS_2019.csv")
+
+```
+
+```{r filter}
+
+# Filter for "Passenger Ship" to isolate cruise ships
+# Write to csv
+AIS2017ps <- AIS2017 %>% 
+  filter(VESSEL_TYPE == "Passenger Ship") %>% 
+  write.csv("AIS2017ps.csv")
+
+AIS2018ps <- AIS2018 %>% 
+  filter(VESSEL_TYPE == "Passenger Ship") %>% 
+  write.csv("AIS2018ps.csv")
+
+AIS2019ps <- AIS2019 %>% 
+  filter(VESSEL_TYPE == "Passenger Ship") %>% 
+  write.csv("AIS2019ps.csv")
+
+```
